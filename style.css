@@ -1,0 +1,87 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: rgb(225,231,243);
+}
+.top{
+    display: flex;
+    justify-content:space-between;
+    height: 100px;
+    background-color:rgb(31,34,53);
+    align-items:center;
+    padding:0px 30px;
+
+}
+.logo{
+    font-size: 25px;
+    color:white;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+}
+a{
+    padding:5px 10px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+a:hover{
+    color:orange;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.mobileview{
+    display: none;
+}
+
+@media screen and (max-width:600px){
+    .Navbar{
+        display:none;
+        position:absolute;
+        top:100px;
+        background-color:rgba(31,34,53,0.9);
+        height: 500px;
+        left:0;
+        right:0;
+        flex-direction: column;
+        padding-left:20px;
+
+    }
+    a::before{
+        content: '\f192';
+        font-size: 15px;
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+        color:orange;
+        padding-right: 10px;
+    }
+
+    .mobileview{
+        display: block;
+    }
+
+    input[type="checkbox"]{
+        -webkit-appearance: none;
+        font-size: 18px;
+        color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="checkbox"]::before{
+        content: '\f0c9';
+        font-size: 25px;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+
+    }
+    input[type="checkbox"]:checked::before{
+        content: '\f00d';
+        font-size: 25px;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+    }
+
+
+}
